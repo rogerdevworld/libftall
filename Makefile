@@ -58,8 +58,8 @@ $(NAME): $(OBJECTS)
 	@echo "$(YELLOW)THE COW MAKES MUUUUUUUUUU!$(RESET)"
 	@echo "$(RESET)"
 
-bonus: 
-	@$(MAKE) BONUS=42 --no-print-directory
+#bonus: 
+#	@$(MAKE) BONUS=42 --no-print-directory
 
 %.o: %.c $(HEADER) Makefile
 	$(CC) $(CFLAGS) -c $< -o $@

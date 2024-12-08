@@ -6,7 +6,7 @@
 
 ## Funciones incluidas
 
-### Funciones de la biblioteca estándar (`libc`)
+### Funciones de la biblioteca estándar (`my_libft`)
 - ft_isascii
 - ft_memcpy
 - ft_putstr_fd
@@ -67,7 +67,7 @@ make
 ```
 ## Compilación con `make bonus`
 
-Las funciones bonus en el **Makefile** como make bonus estan comentados:
+Las funciones bonus en el **Makefile** fue comentada solo con hacer make puede tener todas las funciones asi en el proyecto puedo hacer make u complar todo, aun asi es posible activar para usar el comando:
 
 ```bash
 make bonus
