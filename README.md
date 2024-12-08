@@ -67,3 +67,10 @@ Este proyecto incluye un único **Makefile** que compila automáticamente todos 
 
 ```bash
 make
+
+## Compilación con `make bonus`
+
+Las funciones bonus en el **Makefile** como make bonus estan comentados:
+
+```bash
+make bonus
