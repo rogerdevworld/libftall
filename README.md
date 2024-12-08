@@ -54,11 +54,8 @@
 - ft_lstmap_bonus
 
 ### Funciones específicas
-- get_next_line_utils
 - get_next_line
 - ft_printf
-- ft_flags
-- ft_printf_utils
 
 ---
 ## Compilación con `make`
@@ -67,10 +64,11 @@ Este proyecto incluye un único **Makefile** que compila automáticamente todos 
 
 ```bash
 make
-
+```
 ## Compilación con `make bonus`
 
 Las funciones bonus en el **Makefile** como make bonus estan comentados:
 
 ```bash
 make bonus
+```
