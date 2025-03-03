@@ -128,12 +128,15 @@ void	ft_hex(unsigned int nbr, int *length, char x, int *flag);
 // --- push_swap --- //
 
 // --- long funtions --- //
-long	ft_atoi_long(const char *nptr);
+long	ft_atol(const char *nptr);
 
 // --- int funtions --- //
 int		ft_sqrt(int nb);
 // --- double --- //
 double	ft_fabs_double(double x);
 double	ft_atof(const char *str);
+
+// --- pipex --- //
+int	ft_strcmp(const char *s1, const char *s2)
 
 #endif
