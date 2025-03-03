@@ -27,7 +27,7 @@ BOBJS = $(BSRC:.c=.o)
 # --- ft_printf functions --- #
 # --- get_next_line functions --- #
 # --- additional functions --- #
-ADDSRC = ft_sqrt.c ft_atoi_long.c ft_fabs.c ft_atof.c
+ADDSRC = ft_sqrt.c ft_atol.c ft_fabs.c ft_atof.c ft_strcmp.c
 ADDOBJS = $(ADDSRC:.c=.o)
 
 NAME = libft.a
