@@ -25,8 +25,6 @@
 # include <stdlib.h>
 # include <string.h>
 # include <unistd.h>
-
-/* Incluye los archivos de cabecera de los submódulos */
 # include "libft_modules/ft_printf/include/ft_printf_bonus.h"
 
 # ifndef SIZE_MAX

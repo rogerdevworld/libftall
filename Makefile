@@ -60,7 +60,9 @@ all: repos libft_build printf_build
 # 📚 Regla para compilar Libft.a (incluyendo GNL y bonus)
 libft_build: $(ALL_OBJS) $(FT_PRINTF_NAME)
 	@echo "$(GREEN)Compilando la librería principal $(NAME)...$(RESET)"
-	$(AR) $(NAME) $(ALL_OBJS) $(FT_PRINTF_NAME)
+	$(AR) $(NAME) $(ALL_OBJS)
+	@echo "$(GREEN)Añadiendo ft_printf.a a $(NAME)...$(RESET)"
+	$(AR) $(NAME) $(PRINTF_DIR)/libftprintf.a
 	@echo "$(BLUE)"
 	@echo "     ( __)\      "
 	@echo "     ( oo)\________ "
@@ -76,7 +78,7 @@ printf_build: $(FT_PRINTF_NAME)
 
 $(FT_PRINTF_NAME):
 	@echo "$(GREEN)Compilando ft_printf usando su Makefile...$(RESET)"
-	$(MAKE) -C $(PRINTF_DIR) all bonus
+	$(MAKE) -C $(PRINTF_DIR) CFLAGS="$(CFLAGS) -I../.." all bonus
 
 # --- Reglas de compilación de objetos --- #
 # Regla para los objetos de Libft que están en la raíz
@@ -85,7 +87,6 @@ $(OBJ_DIR)/%.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 # ⚠️ FIX: Nueva regla explícita para los objetos de GNL
-# Esto le dice a 'make' que para crear un objeto GNL, debe buscar el archivo de origen en GNL_DIR.
 $(OBJ_DIR)/get_next_line_bonus.o: $(GNL_DIR)/get_next_line_bonus.c
 	@mkdir -p $(OBJ_DIR)
 	$(CC) $(CFLAGS) -c $< -o $@
